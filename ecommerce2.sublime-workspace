@@ -1,0 +1,568 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"C",
+				"CuratedProducts"
+			],
+			[
+				"A",
+				"AUTH_USER_MODEL"
+			],
+			[
+				"get",
+				"get_context_data"
+			],
+			[
+				"get_object",
+				"get_object_or_404"
+			],
+			[
+				"rece",
+				"recent_transactions"
+			],
+			[
+				"tran",
+				"transactions"
+			],
+			[
+				"rating",
+				"rating_avg"
+			],
+			[
+				"my",
+				"my_rating"
+			],
+			[
+				"Tra",
+				"TransactionAdmin"
+			],
+			[
+				"P",
+				"ProductDetailView"
+			],
+			[
+				"pro",
+				"products"
+			],
+			[
+				"Mul",
+				"MultipleObjectsReturned"
+			],
+			[
+				"pr",
+				"product_list"
+			],
+			[
+				"to",
+				"today_max"
+			],
+			[
+				"today",
+				"today_min"
+			],
+			[
+				"date",
+				"datetime"
+			],
+			[
+				"templat",
+				"template_name"
+			],
+			[
+				"Seller",
+				"SellerAccount"
+			],
+			[
+				"reload",
+				"reload_page"
+			],
+			[
+				"Product",
+				"ProductDetailView"
+			],
+			[
+				"product",
+				"product_obj"
+			],
+			[
+				"See",
+				"SellerAccount"
+			],
+			[
+				"Se",
+				"SellerAccount"
+			],
+			[
+				"downl",
+				"download_link"
+			],
+			[
+				"__",
+				"__name__"
+			],
+			[
+				"produc",
+				"product_id"
+			],
+			[
+				"CH",
+				"CheckoutAjaxView"
+			],
+			[
+				"te",
+				"textStatus"
+			],
+			[
+				"dat",
+				"datetime"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"pu",
+				"pull-right"
+			],
+			[
+				"Tag",
+				"TagView"
+			],
+			[
+				"new",
+				"new_view"
+			],
+			[
+				"anal",
+				"analytic_obj"
+			],
+			[
+				"ana",
+				"analytic_obj"
+			],
+			[
+				"tag_",
+				"tag_set"
+			],
+			[
+				"tags",
+				"tags_list"
+			],
+			[
+				"cleaned",
+				"cleaned_data"
+			],
+			[
+				"clean",
+				"cleaned_data"
+			],
+			[
+				"micro",
+				"micro_created"
+			],
+			[
+				"sd_",
+				"sd_created"
+			],
+			[
+				"hd",
+				"hd_max"
+			],
+			[
+				"ma",
+				"max_length"
+			],
+			[
+				"media",
+				"media_path"
+			],
+			[
+				"thum",
+				"thumb_file"
+			],
+			[
+				"temp",
+				"temp_loc"
+			],
+			[
+				"Thum",
+				"ThumbnailInline"
+			],
+			[
+				"Http",
+				"Http404"
+			],
+			[
+				"Htp",
+				"HttpResponse"
+			],
+			[
+				"file",
+				"filepath"
+			],
+			[
+				"File",
+				"FileSystemStorage"
+			],
+			[
+				"h",
+				"Http404"
+			],
+			[
+				"se",
+				"settings"
+			],
+			[
+				"templa",
+				"template_name"
+			],
+			[
+				"Create",
+				"CreateView"
+			],
+			[
+				"obj",
+				"obj"
+			],
+			[
+				"Pr",
+				"ProductAddForm"
+			],
+			[
+				"object",
+				"object_id"
+			],
+			[
+				"border",
+				"border-color"
+			],
+			[
+				"col",
+				"col-sm-offset-3"
+			],
+			[
+				"from",
+				"from_email"
+			],
+			[
+				"con",
+				"contact_message"
+			],
+			[
+				"fo",
+				"forms"
+			],
+			[
+				"list",
+				"listNotes"
+			],
+			[
+				"simon",
+				"simonPic"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "package",
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src"
+	],
+	"file_history":
+	[
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/.gitignore",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/manage.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/trydjango18/old_settings.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/trydjango18/settings/base.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/trydjango18/settings/local.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/trydjango18/settings/production.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/trydjango18/urls.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/trydjango18/wsgi.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/sellers/views.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/base.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/products/product_detail.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/sellers/urls.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/digitalmarket/urls.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/products/urls.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/products/admin.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/products/models.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/sellers/models.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/products/product_list.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/dashboard/view.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/products/views.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/dashboard/views.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/products/forms.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/form_include.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/form.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/checkout/views.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/sellers/transaction_list.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/sellers/dashboard.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/sellers/mixins.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/sellers/transaction_list_view.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/products/product_list_snippet.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/products/library_list.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/billing/models.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/billing/admin.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/sellers/admin.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/billing/views.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/sellers/product_list_view.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/digitalmarket/mixins.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/products/migrations/0013_productrating.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/products/mixins.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/sellers/mixins.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/detail_view.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/products_backup.json",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/digitalmarket/settings.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/sellers/forms.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/digitalmarket/decorators.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/checkout/test.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/static/js/django.csrf.js",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/static/css/base.css",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/analytics/models.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/tags/views.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/products/templatetags/get_thumbnail.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/analytics/admin.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/tags/models.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/tags/tag_list.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/tags/tag_detail.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/products/templatetags/__init__.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/tags/admin.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/tags/urls.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/CRUD.md",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/static_cdn/media/babywei/base.css",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/list_view.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/static_cdn/staticfiles/css/base.css",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/static_cdn/media/base.css",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/update_view.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/templates/create_view.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/products/migrations/__init__.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/db.sqlite3",
+		"/C/Users/ASUS/Documents/python_work/Web Application/dm/src/products/migrations/0006_auto_20170812_1058.py",
+		"/C/Users/ASUS/Documents/python_work/dm/src/digitalmarket/settings.py",
+		"/C/Users/ASUS/Documents/python_work/dm/src/CRUD.md",
+		"/C/Users/ASUS/Documents/python_work/dm/src/products/admin.py",
+		"/C/Users/ASUS/Documents/python_work/dm/.gitignore",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/400.html",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/403.html",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/404.html",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/trydjango18/settings/production.py",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/500.html",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/trydjango18/settings/local.py",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/webfaction/httpd.conf",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/trydjango18/settings/__init__.py",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/trydjango18/settings/base.py",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/home.html",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/about.html",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/newsletter/views.py",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/trydjango18/settings.py",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/forms.html",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/trydjango18/views.py",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/trydjango18/urls.py",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/registration/activation_email_subject.txt",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/navbar.html",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/base.html",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/head_css.html",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/static_in_pro/our_static/css/navbar-static-top.css",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/static_in_pro/our_static/css/custom.css",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/newsletter/models.py",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/newsletter/forms.py",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/newsletter/admin.py",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/javascript.html",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/static_in_pro/our_static/image/images.txt",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/static_in_pro/our_static/blablabla.txt",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/newsletter/templates/home.html",
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/newsletter/templates/home.tml",
+		"/C/Users/ASUS/Desktop/FeederApp/www/js/services.js",
+		"/C/Users/ASUS/Desktop/FeederApp/www/js/controllers.js",
+		"/C/Users/ASUS/Desktop/FeederApp/www/js/app.js",
+		"/C/Users/ASUS/Desktop/FeederApp/www/index.html",
+		"/C/Users/ASUS/Desktop/ToDoList/www/index.html",
+		"/C/Users/ASUS/Documents/E-LEARNING/Technology/Web Dev Files/trial.html",
+		"/C/Users/ASUS/Documents/E-LEARNING/Technology/Web Dev Files/events.html",
+		"/C/Users/ASUS/Documents/E-LEARNING/Technology/Web Dev Files/index.html",
+		"/C/Users/ASUS/Documents/SOFTWARE/html boilerplate/css/main.css",
+		"/C/Users/ASUS/Documents/SOFTWARE/html boilerplate/js/plugins.js",
+		"/C/Users/ASUS/Documents/SOFTWARE/html boilerplate/index.html",
+		"/C/Users/ASUS/Documents/Test File/index.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Users\\ASUS\\Documents\\python_work\\Web Application\\ecommerce-2\\src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"trydjango18",
+			"user",
+			"title",
+			"account",
+			"content",
+			"products",
+			"path",
+			"GET",
+			"title",
+			"ProductDownloadView",
+			">\n",
+			"    \n",
+			"simon",
+			"brucePic",
+			"simon",
+			"html"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"ecommerce2"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ecommerce2.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 208.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
