@@ -8,6 +8,9 @@ class ProductAdmin(admin.ModelAdmin):
 class VariationAdmin(admin.ModelAdmin):
 	list_display = ["id", "product", "__str__"]
 
+class ProductImageAdmin(admin.ModelAdmin):
+	list_display = ["id", "__str__", "variations"]
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Variation, VariationAdmin)
-admin.site.register(ProductImage)
+admin.site.register(ProductImage, ProductImageAdmin)

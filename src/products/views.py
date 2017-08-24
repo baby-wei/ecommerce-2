@@ -10,7 +10,9 @@ from django.views.generic.list import ListView
 # Create your views here.
 
 from .forms import VariationInventoryFormSet
+from .mixins import StaffRequiredMixin
 from .models import Product, Variation
+
 
 class ProductDetailView(DetailView):
 	model = Product 
@@ -21,6 +23,14 @@ class ProductDetailView(DetailView):
 	# template_name = ...
 	# def get_context_data(self): ...
 
+	def get_context_data(self, *args, **kwargs):
+		context = super(ProductDetailView, self).get_context_data(*args, **kwargs)
+		product_pk = self.kwargs.get("pk")
+		product = get_object_or_404(self.model, pk=product_pk)
+		vari_obj = product.variation_set.first()
+		vari_img = vari_obj.productimage_set.filter(product=product)
+		context["vari_img"] = vari_img
+		return context
 
 # Function-based view:
 # def product_detail_view_func(request, id):
@@ -73,7 +83,7 @@ class ProductListView(ListView):
 		return qs
 
 
-class VariationListView(ListView):
+class VariationListView(StaffRequiredMixin, ListView):
 	model = Variation 
 	queryset = Variation.objects.all()
 
@@ -95,11 +105,13 @@ class VariationListView(ListView):
 			formset.save(commit=False)
 			for form in formset:
 				new_item = form.save(commit=False)
-				product_pk = self.kwargs.get("pk")
-				product = get_object_or_404(Product, pk=product_pk)
-				new_item.product = product
-				new_item.save()
+				if new_item.title:
+					product_pk = self.kwargs.get("pk")
+					product = get_object_or_404(Product, pk=product_pk)
+					new_item.product = product
+					new_item.save()
 				
+			# django messages framework
 			messages.success(request, "Your inventory and pricing has been updated")
 			return redirect("products")
 		raise Http404

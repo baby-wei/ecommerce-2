@@ -80,20 +80,25 @@ post_save.connect(product_post_saved_receiver, sender=Product)
 # Product Images
 def image_upload_to(instance, filename):
 	title = instance.product.title
+	variations = instance.variations.title
 	slug = slugify(title)
+	slug2 = slugify(variations)
 	# [1] means selecting the second item i.e. the extension 
 	#file_extension = filename.split(".")[1]
 	basename, file_extension = filename.split(".")
-	new_filename = "%s-%s.%s" %(slug, instance.id, file_extension)
+	new_filename = "%s-%s.%s" %(slug, slug2, file_extension)
 	return "products/%s/%s" %(slug, new_filename)
 
 
 class ProductImage(models.Model):
 	product = models.ForeignKey(Product)
+	variations = models.ForeignKey(Variation, default=1)
 	# ImageField only works with Pillow library. If not, you can use FileField.
 	# Default goes to base path in static_in_env\media_root
 	image = models.ImageField(upload_to=image_upload_to)
 
 	def __str__(self):
 		return self.product.title
+
+
 
