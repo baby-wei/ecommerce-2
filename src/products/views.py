@@ -11,8 +11,10 @@ from django.views.generic.list import ListView
 
 from .forms import VariationInventoryFormSet
 from .mixins import StaffRequiredMixin
-from .models import Product, Variation
+from .models import Product, Variation, Category 
 
+
+import random
 
 class ProductDetailView(DetailView):
 	model = Product 
@@ -25,11 +27,12 @@ class ProductDetailView(DetailView):
 
 	def get_context_data(self, *args, **kwargs):
 		context = super(ProductDetailView, self).get_context_data(*args, **kwargs)
-		product_pk = self.kwargs.get("pk")
-		product = get_object_or_404(self.model, pk=product_pk)
-		vari_obj = product.variation_set.first()
-		vari_img = vari_obj.productimage_set.filter(product=product)
-		context["vari_img"] = vari_img
+		instance = self.get_object()
+		#order_by("?") = sorted(...random.random())
+		# We don't use order_by becoz it conflicts with .distinct(), hey cannot be used 2geter
+		context["related"] = sorted(self.model.objects.get_related(instance)[:6], 
+			key=lambda x: random.random())
+
 		return context
 
 # Function-based view:
@@ -115,3 +118,20 @@ class VariationListView(StaffRequiredMixin, ListView):
 			messages.success(request, "Your inventory and pricing has been updated")
 			return redirect("products")
 		raise Http404
+
+class CategoryListView(ListView):
+	model = Category 
+	queryset = Category.objects.all()
+	template_name = "products/product_list.html"
+
+class CategoryDetailView(DetailView):
+	model = Category 
+	def get_context_data(self, *args, **kwargs):
+		context = super(CategoryDetailView, self).get_context_data(*args, **kwargs)
+		obj = self.get_object()
+		product_set = obj.product_set.all()
+		default_products = obj.default_category.all()
+		# combining two querysets
+		products = (product_set | default_products).distinct()
+		context['products'] = products
+		return context

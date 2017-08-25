@@ -316,7 +316,7 @@
 			"file": "src/products/templates/products/product_detail.html",
 			"settings":
 			{
-				"buffer_size": 2542,
+				"buffer_size": 2609,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -395,21 +395,10 @@
 	"expanded_folders":
 	[
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/ecommerce2",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/ecommerce2/settings",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/newsletter",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/products",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/products/templates",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/products/templates/products",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/static_in_pro",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/static_in_pro/our_static",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/static_in_pro/our_static/css",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/templates",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/static_in_env",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/static_in_env/media_root",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/static_in_env/media_root/products",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/static_in_env/media_root/products/iphone-cover",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/static_in_env/media_root/products/mp3-player",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/static_in_env/static_root",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/static_in_env/static_root/css"
 	],
@@ -596,7 +585,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -624,7 +613,7 @@
 						"translation.y": 45.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -633,15 +622,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2542,
+						"buffer_size": 2609,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								973,
-								973
+								948,
+								948
 							]
 						],
 						"settings":
@@ -650,10 +639,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 450.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -682,7 +671,7 @@
 						"translation.y": 824.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -710,7 +699,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -849,7 +838,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 50.0,
+	"side_bar_width": 228.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
