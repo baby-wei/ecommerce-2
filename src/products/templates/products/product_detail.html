@@ -23,6 +23,27 @@ $(".variation_select").change(function(){
 	setPrice()
 })
 
+
+$("#submit-btn").click(function(event){
+	event.preventDefault();
+	var formData = $("#add-form").serialize();
+	console.log(formData)
+	$.ajax({
+		type: "GET",
+		url: "{% url 'cart' %}",
+		data: formData,
+		success: function(data) {
+			$("#jquery-message").text("Added " + data.item_added + " Deleted " + data.deleted)
+		},
+		error: function(response, error) {
+			console.log(response)
+			console.log(error)
+			$("#add-form").submit()
+		}
+	})
+	// $("#add-form").submit()
+})
+
 {% endblock %}
 
 </script>
@@ -60,13 +81,16 @@ $(".variation_select").change(function(){
 <div class="col-sm-4">
 
 
-<!-- Using a form to update the args in the /cart/ url (GET) -->
-<form method="GET" action="{% url 'cart' %}">
+<!-- Using a form to update the args in the url by GETTING 'input' data -->
+<form id="add-form" method="GET" action="{% url 'cart' %}">
+<p id="jquery-message" class="lead">
+
+</p>
 {% if object.variation_set.count > 1 %}
 
 	<h3 id='price'>{{ object.variation_set.first.price }}</h3>
 
-	<!-- the (select) "item" is going to have the (option) "value" which is vari_obj.id -->
+	<!-- 'input' data: name='item', value='vari_obj.id' -->
 	<select name="item" class='form-control variation_select'>
 	{% for vari_obj in object.variation_set.all %}
 	<p>{{ vari_obj.productimage_set }}</p>
@@ -75,9 +99,8 @@ $(".variation_select").change(function(){
 	</select>
 
 {% else %}
-	<!-- a name and value pair to be submitted -->
-	<!-- this part of input is affected by the select input above, so we can just add that variation -->
-	<input type="hidden" name="item" value="{{object.variation_set.first.id}}" />
+	<!-- 'input' data: name='item', value='object.variation_set.first.id' -->
+		<input type="hidden" name="item" value="{{object.variation_set.first.id}}" />
 		<h3 id='price'>{% if object.variation_set.first.sale_price %} 
 		{{ object.variation_set.first.sale_price }} 
 		<small class='og-price'> {{ object.variation_set.first.price }}</small>
@@ -93,7 +116,7 @@ $(".variation_select").change(function(){
 <input class="form-control" type="number" name="qty" value="1" />
 
 <br/>
-<input type="submit" value="Add to Cart" class="btn btn-default" />
+<input id="submit-btn" type="submit" value="Add to Cart" class="btn btn-default" />
 
 </form>
 
