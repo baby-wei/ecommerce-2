@@ -1,6 +1,21 @@
 {% extends 'base.html' %}
 
 
+<!-- <style>
+{% block style %}
+.container-alert-flash {
+	position: absolute;
+	top: 10px;
+	z-index: 50000;
+	width: 100%;
+	right: 0%;
+	margin: 0px;
+	display:none;
+}
+{% endblock %}
+</style> -->
+
+
 <script>
 {% block jquery %}
 
@@ -23,6 +38,7 @@ $(".variation_select").change(function(){
 	setPrice()
 })
 
+// ajax add to cart
 
 $("#submit-btn").click(function(event){
 	event.preventDefault();
@@ -33,13 +49,14 @@ $("#submit-btn").click(function(event){
 		url: "{% url 'cart' %}",
 		data: formData,
 		success: function(data) {
-			$("#jquery-message").text("Added " + data.item_added + " Deleted " + data.deleted)
+			showFlashMessage(data.flash_message);
+			updateCartItemCount();
 		},
 		error: function(response, error) {
 			console.log(response)
 			console.log(error)
 			$("#add-form").submit()
-		}
+		},
 	})
 	// $("#add-form").submit()
 })
