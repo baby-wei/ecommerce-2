@@ -82,6 +82,8 @@ $(".item-qty").change(function(){
 	{% include "carts/empty_cart.html" %}
 
 {% else %}
+<div class='col-sm-8 col-sm-offset-2'>
+<h1>Your Cart</h1>
 	<table class='table'>
 	{% for item in object.cartitem_set.all %}
 
@@ -115,8 +117,13 @@ $(".item-qty").change(function(){
 	<td colspan="4" class="text-right">Total: <span id='carttotal'>{{ object.total }}</span></td>
 	</tr>
 
-	</table>
+	<tr>
+	<td colspan="4" class="text-right"><a class="btn btn-warning" href="{% url 'checkout' %}">Checkout</a></span></td>
+	</tr>
 
+	</table>
+</div>
 {% endif %}
+
 </div>
 {% endblock %}

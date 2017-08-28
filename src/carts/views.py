@@ -7,7 +7,7 @@ from django.views.generic.detail import SingleObjectMixin, DetailView
 from django.views.generic.edit import FormMixin
 # Create your views here.
 from orders.forms import GuestCheckoutForm
-from orders.models import UserCheckout
+from orders.models import UserCheckout, Order, UserAddress 
 from products.models import Variation
 
 from .models import Cart, CartItem
@@ -130,12 +130,27 @@ class CartView(SingleObjectMixin, View):
 
 
 
-
+"""
+CheckoutView handles login page, order view
+--redirects to select address page, add address page--
+"""
 class CheckoutView(FormMixin, DetailView):
 	model = Cart
 	template_name = "carts/checkout_view.html"
 	form_class = GuestCheckoutForm
 
+	# (sub-function) create or get new Order object and its id
+	def get_order(self, *args, **kwargs):
+		cart = self.get_object()
+		new_order_id = self.request.session.get("order_id")
+		if new_order_id is None:
+			new_order = Order.objects.create(cart=cart)
+			self.request.session["order_id"] = new_order.id
+		else:
+			new_order = Order.objects.get(id=new_order_id)
+		return new_order 
+
+	#  (sub-function) get the Cart object
 	def get_object(self, *args, **kwargs):   
 		cart_id = self.request.session.get("cart_id")
 		if cart_id == None:
@@ -143,37 +158,50 @@ class CheckoutView(FormMixin, DetailView):
 		cart = Cart.objects.get(id=cart_id)
 		return cart 
 
+
+	# handles logins
 	def get_context_data(self, *args, **kwargs):
 		context = super(CheckoutView, self).get_context_data(*args, **kwargs)
-		user_can_continue = False
-		user_checkout_id = self.request.session.get("user_checkout_id")
-		if not self.request.user.is_authenticated() or user_checkout_id == None:  # or if request.user.is_guest
-			context["login_form"] = AuthenticationForm()
-			# redirects user back to the page he/she just request i.e. CheckoutView
-			context["next_url"] = self.request.build_absolute_uri()
-		elif self.request.user.is_authenticated() or user_checkout_id != None:
-			user_can_continue = True
-		else:
-			pass
+		
 
-		# create a UserCheckout for members
+		# decides whether user_can_continue
+		# displays either the login page or the order view
+		user_can_continue = False
+		user_check_id = self.request.session.get("user_checkout_id")
+
 		if self.request.user.is_authenticated():
+			user_can_continue = True
+			# create a UserCheckout object for registered users
 			user_checkout, created = UserCheckout.objects.get_or_create(email=self.request.user.email)
 			user_checkout.user = self.request.user
 			user_checkout.save()
 			self.request.session["user_checkout_id"] = user_checkout.id 
+		elif not self.request.user.is_authenticated() or user_check_id == None:
+			context["login_form"] = AuthenticationForm()
+			# redirects user back to the page he/she just request i.e. CheckoutView
+			context["next_url"] = self.request.build_absolute_uri()
+		else:
+			pass
 
+		if user_check_id != None:
+			user_can_continue = True
+
+		context["order"] = self.get_order()
 		context["user_can_continue"] = user_can_continue
 		# .get_form() method comes from FormMixin
 		context["form"] = self.get_form()
 		return context
 
+
+	# handles post data for guests
 	def post(self, request, *args, **kwargs):
 		# object created just to prevent error
 		self.object = self.get_object()
+		
+		# requires unregistered users to continue as Guests
 		form = self.get_form()
 		if form.is_valid():
-			# create a UserCheckout for guests
+			# create a UserCheckout object for guests
 			email = form.cleaned_data.get("email")
 			user_checkout, created = UserCheckout.objects.get_or_create(email=email)
 			request.session["user_checkout_id"] = user_checkout.id 
@@ -181,5 +209,35 @@ class CheckoutView(FormMixin, DetailView):
 		else:
 			return self.form_invalid(form)
 
+
 	def get_success_url(self):
 		return reverse("checkout") 
+
+
+
+
+	# creating a new order -- making sure all required informations are there
+	# You will only hv a user_checkout_id after you login as guest or registered user
+	def get(self, request, *args, **kwargs):
+		get_data = super(CheckoutView, self).get(request, *args, **kwargs)
+		cart = self.get_object()
+		new_order = self.get_order()
+		user_checkout_id = request.session.get('user_checkout_id')
+		if user_checkout_id != None:
+			user_checkout = UserCheckout.objects.get(id=user_checkout_id)
+		
+			billing_address_id = request.session.get('billing_address_id')
+			shipping_address_id = request.session.get('shipping_address_id')
+
+			# redirect guests/users to the add/select address page
+			if billing_address_id == None or shipping_address_id == None:
+				return redirect("order_address")
+			else:
+				billing_address = UserAddress.objects.get(id=billing_address_id)
+				shipping_address = UserAddress.objects.get(id=shipping_address_id)
+
+			new_order.user = user_checkout 
+			new_order.billing_address = billing_address
+			new_order.shipping_address = shipping_address
+			new_order.save()
+		return get_data 
