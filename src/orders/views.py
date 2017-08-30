@@ -1,11 +1,47 @@
 from django.contrib import messages
+from django.http import Http404
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, FormView
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 
 # Create your views here.
 from .forms import AddressForm, UserAddressForm
-from .models import UserAddress, UserCheckout
+from .mixins import CartOrderMixin, LoginRequiredMixin
+from .models import UserAddress, UserCheckout, Order
 
+
+
+class OrderDetail(DetailView):
+	model = Order 
+
+	def dispatch(self, request, *args, **kwargs):
+		try:
+			user_check_id = self.request.session.get("user_checkout_id")
+			user_checkout = UserCheckout.objects.get(id=user_check_id)
+		# even if there's no checkout, registered user will be able to see their previous orders
+		except UserCheckout.DoesNotExist:
+			user_checkout = UserCheckout.objects.get(user=request.user)
+			# user_checkout = request.user.usercheckout
+		except:
+			user_checkout = None
+
+		obj = self.get_object()
+		# obj.user == user_checkout makes sure the user can only request what belongs to him
+		if obj.user == user_checkout and user_checkout is not None:
+			return super(OrderDetail, self).dispatch(request, *args, **kwargs)
+		else:
+			raise Http404
+
+
+class OrderList(LoginRequiredMixin, ListView):
+	queryset = Order.objects.all()
+
+	def get_queryset(self):
+		# returns order list specific to registered users
+		user = self.request.user
+		user_checkout = UserCheckout.objects.get(user=user)
+		return super(OrderList, self).get_queryset().filter(user=user_checkout)
 
 # create the form based on UserAddress model for guests and save the address detail for that specific checkout user
 class UserAddressCreateView(CreateView):
@@ -25,7 +61,7 @@ class UserAddressCreateView(CreateView):
 
 
 # get the radio select form of addresses for registered users and save the POST data as session variables
-class AddressSelectFormView(FormView):
+class AddressSelectFormView(CartOrderMixin, FormView):
 	form_class = AddressForm
 	template_name = "orders/address_select.html"
 
@@ -72,9 +108,11 @@ class AddressSelectFormView(FormView):
 	def form_valid(self, form, *args, **kwargs):
 		billing_address = form.cleaned_data["billing_address"]
 		shipping_address = form.cleaned_data["shipping_address"]
-
-		self.request.session["billing_address_id"] = billing_address.id
-		self.request.session["shipping_address_id"] = shipping_address.id
+		# coming from the CartOrderMixin
+		order = self.get_order()
+		order.billing_address = billing_address
+		order.shipping_address = shipping_address
+		order.save()
 
 		return super(AddressSelectFormView, self).form_valid(form, *args, **kwargs) 
 

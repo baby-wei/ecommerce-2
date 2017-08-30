@@ -55,6 +55,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     #third party apps
     'crispy_forms',
+    'django_filters',
     'registration',
     #my apps
     'carts',
@@ -148,6 +149,13 @@ ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
+
+
+#Braintree Payments Details
+BRAINTREE_PUBLIC = "68srpgzwnmkq7nm9"
+BRAINTREE_PRIVATE = "49ecd70556fa34813cf5e2bc211d23c6"
+BRAINTREE_MERCHANT_ID = "xs5k8gnj9mc7x3tn"
+BRAINTREE_ENVIRONMENT = "Sandbox"
 
 
 

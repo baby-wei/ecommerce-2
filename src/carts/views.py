@@ -1,3 +1,7 @@
+import braintree
+
+from django.conf import settings
+from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, Http404, JsonResponse
@@ -7,10 +11,21 @@ from django.views.generic.detail import SingleObjectMixin, DetailView
 from django.views.generic.edit import FormMixin
 # Create your views here.
 from orders.forms import GuestCheckoutForm
+from orders.mixins import CartOrderMixin
 from orders.models import UserCheckout, Order, UserAddress 
 from products.models import Variation
 
 from .models import Cart, CartItem
+
+
+
+
+if settings.DEBUG:
+	braintree.Configuration.configure(braintree.Environment.Sandbox,
+      merchant_id=settings.BRAINTREE_MERCHANT_ID,
+      public_key=settings.BRAINTREE_PUBLIC,
+      private_key=settings.BRAINTREE_PRIVATE,
+    )
 
 
 class ItemCountView(View):
@@ -129,33 +144,21 @@ class CartView(SingleObjectMixin, View):
 		return render(request, template, context)
 
 
-
 """
 CheckoutView handles login page, order view
 --redirects to select address page, add address page--
 """
-class CheckoutView(FormMixin, DetailView):
+class CheckoutView(CartOrderMixin, FormMixin, DetailView):
 	model = Cart
 	template_name = "carts/checkout_view.html"
 	form_class = GuestCheckoutForm
 
-	# (sub-function) create or get new Order object and its id
-	def get_order(self, *args, **kwargs):
-		cart = self.get_object()
-		new_order_id = self.request.session.get("order_id")
-		if new_order_id is None:
-			new_order = Order.objects.create(cart=cart)
-			self.request.session["order_id"] = new_order.id
-		else:
-			new_order = Order.objects.get(id=new_order_id)
-		return new_order 
 
 	#  (sub-function) get the Cart object
 	def get_object(self, *args, **kwargs):   
-		cart_id = self.request.session.get("cart_id")
-		if cart_id == None:
-			return redirect("cart")		
-		cart = Cart.objects.get(id=cart_id)
+		cart = self.get_cart()
+		if cart == None:
+			return None	
 		return cart 
 
 
@@ -169,12 +172,13 @@ class CheckoutView(FormMixin, DetailView):
 		user_can_continue = False
 		user_check_id = self.request.session.get("user_checkout_id")
 
-		if self.request.user.is_authenticated():
+		if self.request.user.is_authenticated():	# REGISTERED USER
 			user_can_continue = True
 			# create a UserCheckout object for registered users
 			user_checkout, created = UserCheckout.objects.get_or_create(email=self.request.user.email)
 			user_checkout.user = self.request.user
 			user_checkout.save()
+			context['client_token'] = user_checkout.get_client_token()
 			self.request.session["user_checkout_id"] = user_checkout.id 
 		elif not self.request.user.is_authenticated() or user_check_id == None:
 			context["login_form"] = AuthenticationForm()
@@ -185,6 +189,9 @@ class CheckoutView(FormMixin, DetailView):
 
 		if user_check_id != None:
 			user_can_continue = True
+			if not self.request.user.is_authenticated():	#GUEST USER
+				user_checkout_2 = UserCheckout.objects.get(id=user_check_id)
+				context['client_token'] = user_checkout_2.get_client_token()
 
 		context["order"] = self.get_order()
 		context["user_can_continue"] = user_can_continue
@@ -221,23 +228,59 @@ class CheckoutView(FormMixin, DetailView):
 	def get(self, request, *args, **kwargs):
 		get_data = super(CheckoutView, self).get(request, *args, **kwargs)
 		cart = self.get_object()
+		if cart == None:
+			return redirect("cart")
 		new_order = self.get_order()
 		user_checkout_id = request.session.get('user_checkout_id')
 		if user_checkout_id != None:
 			user_checkout = UserCheckout.objects.get(id=user_checkout_id)
-		
-			billing_address_id = request.session.get('billing_address_id')
-			shipping_address_id = request.session.get('shipping_address_id')
-
 			# redirect guests/users to the add/select address page
-			if billing_address_id == None or shipping_address_id == None:
+			if new_order.billing_address == None or new_order.shipping_address == None:
 				return redirect("order_address")
-			else:
-				billing_address = UserAddress.objects.get(id=billing_address_id)
-				shipping_address = UserAddress.objects.get(id=shipping_address_id)
 
 			new_order.user = user_checkout 
-			new_order.billing_address = billing_address
-			new_order.shipping_address = shipping_address
 			new_order.save()
 		return get_data 
+
+
+class CheckoutFinalView(CartOrderMixin, View):
+	def post(self, request, *args, **kwargs):
+		# Real transaction process
+		order = self.get_order()
+		order_total = order.order_total
+		nonce = request.POST.get("payment_method_nonce")
+		if nonce:
+			result = braintree.Transaction.sale({
+			    "amount": order_total,
+			    "payment_method_nonce": nonce,
+			    "billing": {
+				    "postal_code": "%s" %(order.billing_address.zipcode),
+				},
+			    "options": {
+			        "submit_for_settlement": True
+			    }
+			})
+			if result.is_success:		
+				order.mark_completed(order_id = result.transaction.id )
+				messages.success(request, "Thank you for your order.")
+				del self.request.session["cart_id"]
+				del self.request.session["order_id"]
+			else:
+				message.success(request, "%s" %(result.message))
+				return redirect("checkout")
+
+
+		# Mockup transaction process
+		# order = self.get_order()
+		# if request.POST.get("payment_token") == 'ABC':
+		# 	order.mark_completed()
+		# 	messages.success(request, "Thank you for your order.")
+		# 	del self.request.session["cart_id"]
+		# 	del self.request.session["order_id"]
+
+
+		return redirect("order_detail", pk=order.pk)
+
+
+	def get(self, request, *args, **kwargs):
+		return redirect("checkout")

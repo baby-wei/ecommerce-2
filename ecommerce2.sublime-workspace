@@ -4,6 +4,118 @@
 		"selected_items":
 		[
 			[
+				"client",
+				"client_token"
+			],
+			[
+				"brain",
+				"braintree_id"
+			],
+			[
+				"get",
+				"get_braintree_id"
+			],
+			[
+				"U",
+				"UserCheckout"
+			],
+			[
+				"me",
+				"messages"
+			],
+			[
+				"Us",
+				"UserCheckout"
+			],
+			[
+				"user",
+				"user_checkout"
+			],
+			[
+				"Or",
+				"OrderDetail"
+			],
+			[
+				"de",
+				"decorators"
+			],
+			[
+				"Ca",
+				"CartOrderMixin"
+			],
+			[
+				"C",
+				"CartOrderMixin"
+			],
+			[
+				"for",
+				"form_valid"
+			],
+			[
+				"get_",
+				"get_checkout_user"
+			],
+			[
+				"use",
+				"user_checkout"
+			],
+			[
+				"User",
+				"UserAddressForm"
+			],
+			[
+				"form",
+				"form_class"
+			],
+			[
+				"uSER",
+				"UserCheckout"
+			],
+			[
+				"get_ob",
+				"get_object"
+			],
+			[
+				"new",
+				"new_order"
+			],
+			[
+				"or",
+				"order_pre_save"
+			],
+			[
+				"cart",
+				"cart_total"
+			],
+			[
+				"shippin",
+				"shipping_total_price"
+			],
+			[
+				"ship",
+				"shipping_total_price"
+			],
+			[
+				"shi",
+				"shipping_address"
+			],
+			[
+				"bi",
+				"billing_address_id"
+			],
+			[
+				"billing",
+				"billing_address"
+			],
+			[
+				"shipp",
+				"shipping_address"
+			],
+			[
+				"ch",
+				"CheckoutView"
+			],
+			[
 				"A",
 				"AddressSelectFormView"
 			],
@@ -20,16 +132,8 @@
 				"objects"
 			],
 			[
-				"user",
-				"user_checkout"
-			],
-			[
 				"user_c",
 				"user_checkout_id"
-			],
-			[
-				"get",
-				"get_user_model"
 			],
 			[
 				"Htt",
@@ -80,28 +184,12 @@
 				"cartitem_set"
 			],
 			[
-				"cart",
-				"cart_item"
-			],
-			[
 				"del",
 				"delete"
 			],
 			[
-				"form",
-				"formData"
-			],
-			[
 				"delete",
 				"delete_item"
-			],
-			[
-				"C",
-				"CartAdmin"
-			],
-			[
-				"Ca",
-				"CartItem"
 			],
 			[
 				"Vari",
@@ -130,18 +218,6 @@
 			[
 				"re",
 				"request"
-			],
-			[
-				"new",
-				"new_item"
-			],
-			[
-				"for",
-				"formset"
-			],
-			[
-				"get_",
-				"get_queryset"
 			],
 			[
 				"query",
@@ -392,19 +468,28 @@
 	"buffers":
 	[
 		{
+			"file": "src/ecommerce2/settings/local.py",
+			"settings":
+			{
+				"buffer_size": 3942,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "src/orders/models.py",
 			"settings":
 			{
-				"buffer_size": 1028,
+				"buffer_size": 3257,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/orders/forms.py",
+			"file": "src/templates/javascript.html",
 			"settings":
 			{
-				"buffer_size": 1034,
+				"buffer_size": 1064,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -413,43 +498,7 @@
 			"file": "src/carts/views.py",
 			"settings":
 			{
-				"buffer_size": 5507,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/orders/views.py",
-			"settings":
-			{
-				"buffer_size": 980,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/orders/templates/orders/address_select.html",
-			"settings":
-			{
-				"buffer_size": 206,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/ecommerce2/urls.py",
-			"settings":
-			{
-				"buffer_size": 1214,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/orders/admin.py",
-			"settings":
-			{
-				"buffer_size": 177,
+				"buffer_size": 7432,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -458,7 +507,7 @@
 			"file": "src/carts/templates/carts/checkout_view.html",
 			"settings":
 			{
-				"buffer_size": 909,
+				"buffer_size": 1572,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -508,26 +557,34 @@
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/ecommerce2/settings",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/orders",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/orders/templates",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/orders/templates/orders",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/products",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/products/templates",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/products/templates/products",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/static_in_pro",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/static_in_pro/our_static",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/static_in_pro/our_static/css",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/static_in_pro/our_static/js",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/templates",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/templates/registration"
 	],
 	"file_history":
 	[
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/ecommerce2/settings/local.py",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/carts/views.py",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/ecommerce2/urls.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/orders/views.py",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/carts/templates/carts/checkout_view.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/orders/models.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/orders/mixins.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/orders/templates/orders/order_list.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/orders/templates/orders/order_detail.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/ecommerce2/urls.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/carts/views.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/orders/templates/orders/order_summary_short.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/orders/admin.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/orders/templates/orders/address_select.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/orders/forms.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/carts/templates/carts/view.html",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/products/models.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/templates/forms.html",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/carts/models.py",
+		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/ecommerce2/settings/local.py",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/templates/navbar.html",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/templates/javascript.html",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/carts/templates/carts/view.html",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/products/templates/products/product_detail.html",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/templates/registration/registration_form.html",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/templates/base.html",
@@ -536,7 +593,6 @@
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/static_in_pro/our_static/js/custom.js",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/templates/alert.html",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/static_in_pro/our_static/css/custom.css",
-		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/products/models.py",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/carts/admin.py",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/carts/templates/view.html",
 		"/C/Users/ASUS/Documents/python_work/Web Application/ecommerce-2/src/products/admin.py",
@@ -637,17 +693,7 @@
 		"/C/Users/ASUS/Documents/python_work/trydjango18/src/trydjango18/settings/__init__.py",
 		"/C/Users/ASUS/Documents/python_work/trydjango18/src/trydjango18/settings/base.py",
 		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/home.html",
-		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/about.html",
-		"/C/Users/ASUS/Documents/python_work/trydjango18/src/newsletter/views.py",
-		"/C/Users/ASUS/Documents/python_work/trydjango18/src/trydjango18/settings.py",
-		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/forms.html",
-		"/C/Users/ASUS/Documents/python_work/trydjango18/src/trydjango18/views.py",
-		"/C/Users/ASUS/Documents/python_work/trydjango18/src/trydjango18/urls.py",
-		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/registration/activation_email_subject.txt",
-		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/navbar.html",
-		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/base.html",
-		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/head_css.html",
-		"/C/Users/ASUS/Documents/python_work/trydjango18/src/static_in_pro/our_static/css/navbar-static-top.css"
+		"/C/Users/ASUS/Documents/python_work/trydjango18/src/templates/about.html"
 	],
 	"find":
 	{
@@ -666,6 +712,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"user_checkou",
+			"UserAddress",
+			"DetailView",
+			"Created",
+			"completed",
+			"Order",
+			"billing_address_id",
+			"shipping_address",
+			"billing_address",
+			"SingleObjectMixin",
+			"billing_address",
+			"shipping_address",
+			"billing_address",
 			"UserCheckout",
 			"city",
 			")\n",
@@ -725,160 +784,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/orders/models.py",
+					"file": "src/ecommerce2/settings/local.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1028,
+						"buffer_size": 3942,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								803,
-								803
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/orders/forms.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1034,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								867,
-								867
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/carts/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5507,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5507,
-								5507
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1638.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/orders/views.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 980,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								979,
-								979
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/orders/templates/orders/address_select.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 206,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								178,
-								178
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/ecommerce2/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1214,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1021,
-								1021
+								3941,
+								3941
 							]
 						],
 						"settings":
@@ -888,55 +806,115 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1482.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "src/orders/admin.py",
+					"buffer": 1,
+					"file": "src/orders/models.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 177,
+						"buffer_size": 3257,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								176,
-								176
+								1205,
+								1205
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "src/carts/templates/carts/checkout_view.html",
+					"buffer": 2,
+					"file": "src/templates/javascript.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 909,
+						"buffer_size": 1064,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								342,
-								342
+								1064,
+								1064
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/carts/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7432,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7432,
+								7432
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 2730.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/carts/templates/carts/checkout_view.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1572,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1527,
+								1527
 							]
 						],
 						"settings":
@@ -944,10 +922,10 @@
 							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 234.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1030,7 +1008,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 98.0,
+	"side_bar_width": 50.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
