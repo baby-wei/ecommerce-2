@@ -9,7 +9,7 @@ django-crispy-forms==1.6.1
 django-registration-redux==1.7
 idna==2.6
 olefile==0.44
-Pillow==4.2.1
+Pillow==8.2.0
 pycparser==2.18
 pyOpenSSL==17.2.0
 requests==2.18.4
